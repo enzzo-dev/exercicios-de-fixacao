@@ -32,7 +32,7 @@ namespace exercicios_de_fixacao
             }
 
             //Ex 2
-            static void  valorAlcool(double a) //Variável a é a quantidade de litros
+            double valorAlcool(double a) //Variável a é a quantidade de litros
             {
                 double alcool = 4.90;
                 double desconto1 = 0.03;
@@ -40,16 +40,17 @@ namespace exercicios_de_fixacao
                 double aDesc1 = alcool * a - desconto1;
                 double aDesc2 = alcool * a - desconto2;
                 if(a <= 20){
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"O valor a se pagar é: R${aDesc1}");
                     Console.ResetColor();
                 } else if(a > 20){
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"O valor a se pagar é: R${aDesc2}");
                     Console.ResetColor();
                 }
+                return 0;
             }
-             static void  valorGasolina(double b) //Variável a é a quantidade de litros
+             double valorGasolina(double b) //Variável a é a quantidade de litros
             {
                 double gasolina = 5.30;
                 double desconto1 = 0.04;
@@ -57,13 +58,35 @@ namespace exercicios_de_fixacao
                 double aDesc1 = gasolina * b - desconto1;
                 double aDesc2 = gasolina * b - desconto2;
                 if(b <= 20){
-                   Console.WriteLine($"O valor a se pagar é: R${aDesc1}");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"O valor a se pagar é: R${aDesc1}");
+                    Console.ResetColor();
                 } else if(b > 20){
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"O valor a se pagar é: R${aDesc2}");
+                    Console.ResetColor();
                 }
+                return 0;
             }
 
-            Console.WriteLine("Qual tipo de combustivel você deseja colocar?");''
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Qual tipo de combustivel você deseja colocar? -G (Gasolina) ou -A (Alcool)");
+            Console.ResetColor();
+            string combus = Console.ReadLine();
+
+            if(combus == "G" || combus == "g"){
+
+                Console.WriteLine("Quantos litros de gasolina você deseja colocar?");
+                double litros = double.Parse(Console.ReadLine());
+                Console.WriteLine($"{valorGasolina(litros)}");
+
+            }else if(combus == "A" || combus == "a"){
+
+                Console.WriteLine("Quantos litros de gasolina você deseja colocar?");
+                double litrosA = double.Parse(Console.ReadLine());
+                Console.WriteLine($"{valorAlcool(litrosA)}");
+
+            }
         }
     }
 }
