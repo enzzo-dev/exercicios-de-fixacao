@@ -115,7 +115,27 @@ namespace exercicios_de_fixacao
                  System.Console.WriteLine($"Valor total a se pagar: R${totalApagar} Reais");
             }
 
-            
+            //Ex: 4
+
+                // int numero,numero_maior, numero_menor;
+
+                // Console.WriteLine("Digite um valor inteiro aleatório: ");
+                // numero = int.Parse(Console.ReadLine());
+
+                // numero_maior = numero;
+                // numero_menor = numero;
+
+                // int cont = 1;
+
+                // while(cont < 10)
+                // {
+                //     if( cont = 1){
+
+                //     }
+                // }
+                // Console.WriteLine($"O maior número registrado é: {numero_maior}");
+                // Console.WriteLine($"O menor número registrado é: {numero_menor}");
+
             //Ex: 5
             Console.WriteLine("Digite o número da tabuada desejada: ");
             int esquerda = int.Parse(Console.ReadLine());
@@ -129,22 +149,35 @@ namespace exercicios_de_fixacao
             string[] nomes = new string[10];
             string nome;
 
-            for(var i = 0 ; i < nomes.Length ; i++)
+            for(var i5 = 0 ; i5 < nomes.Length ; i5++)
             {
                 System.Console.WriteLine("Digite um nome: ");
-                nomes[i] = Console.ReadLine();
+                nomes[i5] = Console.ReadLine();
             }
 
             Console.WriteLine("Digite um nome a ser pesquisado: ");
             nome = Console.ReadLine();
 
-            for(var i2 = 0 ; i2 < nomes.Length ; i2++)
+            for(var i6 = 0 ; i6 < nomes.Length ; i6++)
             {
-                if( nome == nomes[i2]){
+                if( nome == nomes[i6]){
                     System.Console.WriteLine("Nome encontrado!");
                 } 
             }
-           
+
+            //Ex: 7
+
+            int[] numbers = new int[15];
+            for(var i7 = 0 ; i7 < 15 ; i7++)
+            {
+                Console.WriteLine($"Escreva um número: ");
+                numbers[i7] = int.Parse(Console.ReadLine());
+            }
+
+            for( var i8 = 15 ; i8 > 1 ; i8--)
+            {
+                Console.WriteLine($"Ordem de forma invertida da qual foi declarada: {numbers[i8 - 1]}");
+            }
         }
     }
 }
