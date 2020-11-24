@@ -31,15 +31,21 @@ namespace exercicios_de_fixacao
                 Console.ResetColor();
             }
 
+
+
+
+
+
+
             //Ex 2
 
             double valorAlcool(double a) //Variável a é a quantidade de litros
             {
                 double alcool = 4.90;
-                double desconto1 = 0.03;
-                double desconto2 = 0.05;
-                double aDesc1 =  desconto1 * alcool * a;
-                double aDesc2 = desconto2 * alcool * a;
+                double desconto1 = a * alcool * 0.03;
+                double desconto2 = a * alcool * 0.05;
+                double aDesc1 = (a * alcool) - (desconto1);
+                double aDesc2 = (a * alcool) - (desconto2);
                 if(a <= 20){
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"O valor a se pagar é: R${aDesc1}");
@@ -54,10 +60,10 @@ namespace exercicios_de_fixacao
              double valorGasolina(double b) //Variável a é a quantidade de litros
             {
                 double gasolina = 5.30;
-                double desconto1 = 0.04 ;
-                double desconto2 = 0.06;
-                double aDesc1 = desconto1 * gasolina * b;
-                double aDesc2 = desconto2 * gasolina * b;
+                double desconto1 = b * gasolina * 0.04;
+                double desconto2 = b * gasolina * 0.06;
+                double aDesc1 = (b * gasolina) - (desconto1);
+                double aDesc2 = (b * gasolina) - (desconto2);
                 if(b <= 20){
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"O valor a se pagar é: R${aDesc1}");
@@ -78,8 +84,8 @@ namespace exercicios_de_fixacao
             if(combus == "G" || combus == "g"){
 
                 Console.WriteLine("Quantos litros de gasolina você deseja colocar?");
-                double litros = double.Parse(Console.ReadLine());
-                Console.WriteLine($"{valorGasolina(litros)}");
+                double litrosG = double.Parse(Console.ReadLine());
+                Console.WriteLine($"{valorGasolina(litrosG)}");
 
             }else if(combus == "A" || combus == "a"){
 
@@ -87,6 +93,11 @@ namespace exercicios_de_fixacao
                 double litrosA = double.Parse(Console.ReadLine());
                 Console.WriteLine($"{valorAlcool(litrosA)}");
             }
+
+
+
+
+
 
              //Ex: 3
 
@@ -114,6 +125,11 @@ namespace exercicios_de_fixacao
                 totalApagar = total - desconto3;
                  System.Console.WriteLine($"Valor total a se pagar: R${totalApagar} Reais");
             }
+
+
+
+
+
 
             //Ex: 4
                 int[] numeros = new int[10];
@@ -144,6 +160,12 @@ namespace exercicios_de_fixacao
                     Console.WriteLine($"O menor número declarado é: {menorNum}");
                     Console.ResetColor();
 
+
+
+
+
+
+
             //Ex: 5
             Console.WriteLine("Digite o número da tabuada desejada: ");
             int esquerda = int.Parse(Console.ReadLine());
@@ -152,6 +174,11 @@ namespace exercicios_de_fixacao
                 int resultado = esquerda * direita; 
                 Console.WriteLine($"{esquerda} x {direita} = {resultado} ");
             }
+
+
+
+
+
 
             //Ex: 6
             string[] nomes = new string[10];
@@ -172,6 +199,11 @@ namespace exercicios_de_fixacao
                     System.Console.WriteLine("Nome encontrado!");
                 } 
             }
+
+
+
+
+            
 
             //Ex: 7
 
