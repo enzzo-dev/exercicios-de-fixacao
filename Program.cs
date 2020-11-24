@@ -85,7 +85,26 @@ namespace exercicios_de_fixacao
                 Console.WriteLine("Quantos litros de gasolina você deseja colocar?");
                 double litrosA = double.Parse(Console.ReadLine());
                 Console.WriteLine($"{valorAlcool(litrosA)}");
+            }
 
+            //Ex: 3
+            string[] nomes = new string[10];
+            string nome;
+
+            for(var i = 0 ; i < nomes.Length ; i++)
+            {
+                System.Console.WriteLine("Digite um nome: ");
+                nomes[i] = Console.ReadLine();
+            }
+
+            Console.WriteLine("Digite um nome a ser pesquisado: ");
+            nome = Console.ReadLine();
+
+            for(var i2 = 0 ; i2 < nomes.Length ; i2++)
+            {
+                if( nome == nomes[i2]){
+                    System.Console.WriteLine("Nome encontrado!");
+                } 
             }
         }
     }
