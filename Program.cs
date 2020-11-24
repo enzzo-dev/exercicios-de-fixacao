@@ -6,7 +6,7 @@ namespace exercicios_de_fixacao
     {
         static void Main(string[] args)
         {
-            //Condicionais
+            //Ex: 1
             Console.WriteLine("Digite o ano atual: ");
             int anoAtual = int.Parse(Console.ReadLine());
             Console.WriteLine("Agora, digite o ano de seu nascimento!");
@@ -69,6 +69,7 @@ namespace exercicios_de_fixacao
                 return 0;
             }
 
+            //Ex: 2
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Qual tipo de combustivel você deseja colocar? -G (Gasolina) ou -A (Alcool)");
             Console.ResetColor();
@@ -87,7 +88,7 @@ namespace exercicios_de_fixacao
                 Console.WriteLine($"{valorAlcool(litrosA)}");
             }
 
-            //Ex: 3
+            //Ex: 6
             string[] nomes = new string[10];
             string nome;
 
@@ -114,6 +115,33 @@ namespace exercicios_de_fixacao
             {
                 int resultado = esquerda * direita; 
                 Console.WriteLine($"{esquerda} x {direita} = {resultado} ");
+            }
+
+            //Ex: 3
+
+            System.Console.WriteLine("Digite o nome do produto: ");
+            string descricaoNome = Console.ReadLine();
+
+            System.Console.WriteLine("Digite a quantidade do produto: ");
+            double qtdAdqui = int.Parse(Console.ReadLine());
+            double precoUnit = 5000;
+
+            double desconto1 = 0.02 * precoUnit * qtdAdqui;
+            double desconto2 = 0.03 * precoUnit * qtdAdqui;
+            double desconto3 = 0.05 * precoUnit * qtdAdqui;
+
+            double total = qtdAdqui * precoUnit;
+
+            double totalApagar;
+            if(qtdAdqui <= 5){
+                 totalApagar = total - desconto1;
+                 System.Console.WriteLine($"Valor total a se pagar: R${totalApagar} Reais");
+            } else if(qtdAdqui > 5 && qtdAdqui <= 10){
+                totalApagar = total - desconto2;
+                 System.Console.WriteLine($"Valor total a se pagar: R${totalApagar} Reais");
+            } else if(qtdAdqui > 10){
+                totalApagar = total - desconto3;
+                 System.Console.WriteLine($"Valor total a se pagar: R${totalApagar} Reais");
             }
         }
     }
