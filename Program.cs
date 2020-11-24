@@ -106,6 +106,15 @@ namespace exercicios_de_fixacao
                     System.Console.WriteLine("Nome encontrado!");
                 } 
             }
+
+            //Ex: 5
+            Console.WriteLine("Digite o número da tabuada desejada: ");
+            int esquerda = int.Parse(Console.ReadLine());
+            for(var direita = 0 ; direita <= 10 ; direita++)
+            {
+                int resultado = esquerda * direita; 
+                Console.WriteLine($"{esquerda} x {direita} = {resultado} ");
+            }
         }
     }
 }
