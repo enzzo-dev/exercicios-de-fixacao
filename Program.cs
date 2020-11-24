@@ -32,13 +32,14 @@ namespace exercicios_de_fixacao
             }
 
             //Ex 2
+
             double valorAlcool(double a) //Variável a é a quantidade de litros
             {
                 double alcool = 4.90;
                 double desconto1 = 0.03;
                 double desconto2 = 0.05;
-                double aDesc1 = alcool * a - desconto1;
-                double aDesc2 = alcool * a - desconto2;
+                double aDesc1 =  desconto1 * alcool * a;
+                double aDesc2 = desconto2 * alcool * a;
                 if(a <= 20){
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"O valor a se pagar é: R${aDesc1}");
@@ -53,10 +54,10 @@ namespace exercicios_de_fixacao
              double valorGasolina(double b) //Variável a é a quantidade de litros
             {
                 double gasolina = 5.30;
-                double desconto1 = 0.04;
+                double desconto1 = 0.04 ;
                 double desconto2 = 0.06;
-                double aDesc1 = gasolina * b - desconto1;
-                double aDesc2 = gasolina * b - desconto2;
+                double aDesc1 = desconto1 * gasolina * b;
+                double aDesc2 = desconto2 * gasolina * b;
                 if(b <= 20){
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"O valor a se pagar é: R${aDesc1}");
@@ -69,7 +70,6 @@ namespace exercicios_de_fixacao
                 return 0;
             }
 
-            //Ex: 2
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Qual tipo de combustivel você deseja colocar? -G (Gasolina) ou -A (Alcool)");
             Console.ResetColor();
