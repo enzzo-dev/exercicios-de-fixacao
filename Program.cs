@@ -116,25 +116,33 @@ namespace exercicios_de_fixacao
             }
 
             //Ex: 4
+                int[] numeros = new int[10];
+                int menorNum = 0 , maiorNum = 0;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("======================================= Digite 10 valores: ================================================");
+                Console.ResetColor();
 
-                // int numero,numero_maior, numero_menor;
+                for(var i4 = 0 ; i4 < numeros.Length ; i4++)
+                {
+                    Console.WriteLine($"Digite o {i4 + 1}° número: ");
+                    numeros[i4] = int.Parse(Console.ReadLine());
 
-                // Console.WriteLine("Digite um valor inteiro aleatório: ");
-                // numero = int.Parse(Console.ReadLine());
+                    menorNum = numeros[0];
+                    if(numeros[i4] < menorNum)
+                    {
+                        menorNum = numeros[i4];
+                    } else if(numeros[i4] > maiorNum)
+                    {
+                        maiorNum = numeros[i4];
+                    }
 
-                // numero_maior = numero;
-                // numero_menor = numero;
-
-                // int cont = 1;
-
-                // while(cont < 10)
-                // {
-                //     if( cont = 1){
-
-                //     }
-                // }
-                // Console.WriteLine($"O maior número registrado é: {numero_maior}");
-                // Console.WriteLine($"O menor número registrado é: {numero_menor}");
+                }
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"O maior número declarado é: {maiorNum}");
+                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"O menor número declarado é: {menorNum}");
+                    Console.ResetColor();
 
             //Ex: 5
             Console.WriteLine("Digite o número da tabuada desejada: ");
