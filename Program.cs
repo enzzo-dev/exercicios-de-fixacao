@@ -176,7 +176,9 @@ namespace exercicios_de_fixacao
 
             for( var i8 = 15 ; i8 > 1 ; i8--)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"Ordem de forma invertida da qual foi declarada: {numbers[i8 - 1]}");
+                Console.ResetColor();
             }
         }
     }
