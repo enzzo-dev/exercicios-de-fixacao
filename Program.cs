@@ -88,36 +88,7 @@ namespace exercicios_de_fixacao
                 Console.WriteLine($"{valorAlcool(litrosA)}");
             }
 
-            //Ex: 6
-            string[] nomes = new string[10];
-            string nome;
-
-            for(var i = 0 ; i < nomes.Length ; i++)
-            {
-                System.Console.WriteLine("Digite um nome: ");
-                nomes[i] = Console.ReadLine();
-            }
-
-            Console.WriteLine("Digite um nome a ser pesquisado: ");
-            nome = Console.ReadLine();
-
-            for(var i2 = 0 ; i2 < nomes.Length ; i2++)
-            {
-                if( nome == nomes[i2]){
-                    System.Console.WriteLine("Nome encontrado!");
-                } 
-            }
-
-            //Ex: 5
-            Console.WriteLine("Digite o número da tabuada desejada: ");
-            int esquerda = int.Parse(Console.ReadLine());
-            for(var direita = 0 ; direita <= 10 ; direita++)
-            {
-                int resultado = esquerda * direita; 
-                Console.WriteLine($"{esquerda} x {direita} = {resultado} ");
-            }
-
-            //Ex: 3
+             //Ex: 3
 
             System.Console.WriteLine("Digite o nome do produto: ");
             string descricaoNome = Console.ReadLine();
@@ -143,6 +114,37 @@ namespace exercicios_de_fixacao
                 totalApagar = total - desconto3;
                  System.Console.WriteLine($"Valor total a se pagar: R${totalApagar} Reais");
             }
+
+            
+            //Ex: 5
+            Console.WriteLine("Digite o número da tabuada desejada: ");
+            int esquerda = int.Parse(Console.ReadLine());
+            for(var direita = 0 ; direita <= 10 ; direita++)
+            {
+                int resultado = esquerda * direita; 
+                Console.WriteLine($"{esquerda} x {direita} = {resultado} ");
+            }
+
+            //Ex: 6
+            string[] nomes = new string[10];
+            string nome;
+
+            for(var i = 0 ; i < nomes.Length ; i++)
+            {
+                System.Console.WriteLine("Digite um nome: ");
+                nomes[i] = Console.ReadLine();
+            }
+
+            Console.WriteLine("Digite um nome a ser pesquisado: ");
+            nome = Console.ReadLine();
+
+            for(var i2 = 0 ; i2 < nomes.Length ; i2++)
+            {
+                if( nome == nomes[i2]){
+                    System.Console.WriteLine("Nome encontrado!");
+                } 
+            }
+           
         }
     }
 }
